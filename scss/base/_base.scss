@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+    line-height: inherit;
+    
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+ul {
+    list-style: none;
+}
+
+html, body{
+    scroll-behavior: smooth;
+    min-height: 100vh;
+}
+
+body {
+    @include fira(16px, 1, 400);
+    background: $bg-dark;
+    color: $color-primary;
+    min-height: 100vh;
+    min-width: 320px;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+
+    &.hide{
+        overflow-y: hidden;
+    }
+}
+
+main{
+    flex: 1;
+}
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+
+    @media (max-width:1050px) {
+        padding: 0 10px;
+    }
+}
+
+.inner-title {
+    display: flex;
+    align-items: center;
+    font-size: 32px;
+    font-weight: 500;
+    color: $color-secondary;
+
+    &::before {
+        content: "#";
+        color: $color-violete;
+    }
+
+    &::after {
+        content: "";
+        background: $color-violete;
+        margin-left: 16px;
+    }
+}
+
+.social{
+    width: 32px;
+    height: 311px;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px;
+    z-index: 1;
+    left: 17px;
+}
+
+.btn-up{
+    position: fixed;
+    z-index: 4;
+    right: 50px;
+    bottom: 50px;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background:  url(../img/arrow-up-long-solid.svg) no-repeat center;
+    background-size: 20px;
+    display: none;
+}
