@@ -1,5 +1,12 @@
-@mixin fira($fz, $lh, $fw){
-    font-family: 'Fira Code', monospace;
+@mixin cormorant($fz, $lh, $fw){
+    font-family: 'Cormorant Upright', serif;
+    font-size: $fz;
+    line-height: $lh;
+    font-weight: $fw;
+}
+
+@mixin open-sans($fz, $lh, $fw){
+    font-family: 'Open Sans', sans-serif;
     font-size: $fz;
     line-height: $lh;
     font-weight: $fw;

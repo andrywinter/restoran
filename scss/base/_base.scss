@@ -25,7 +25,7 @@ html, body{
 }
 
 body {
-    @include fira(16px, 1, 400);
+    @include cormorant(16px, normal, 700);
     background: $bg-dark;
     color: $color-primary;
     min-height: 100vh;
@@ -44,11 +44,11 @@ main{
 }
 
 .container {
-    max-width: 1024px;
+    max-width: 1300px;
     width: 100%;
     margin: 0 auto;
 
-    @media (max-width:1050px) {
+    @media (max-width:1350px) {
         padding: 0 10px;
     }
 }
