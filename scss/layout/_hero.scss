@@ -1,28 +1,25 @@
 .hero {
-    padding: 62px 0 112px 0;
+    padding: 48px 0 244px 0;
 
     &-wrapper {
         display: flex;
-        gap: 30px;
-        justify-content: center;
+        gap: 180px;
+        justify-content: space-between;
         align-items: center;
         flex-wrap: wrap;
     }
 
     &-content {
-        max-width: 537px;
+        max-width: 453px;
         width: 100%;
     }
 
     &-title {
         color: $color-secondary;
-        font-size: 32px;
-        font-weight: 600;
-        margin: 0 0 32px 0;
+        @include cormorant(89px, 130%, 700);
+        letter-spacing: 3.6px;
+        text-transform: capitalize;
 
-        span{
-            color: $color-violete;
-        }
     }
 
     &-link {
@@ -32,7 +29,7 @@
     }
 
     &-img {
-        max-width: 457px;
+        max-width: 667px;
         width: 100%;
 
         figcuption {
@@ -44,7 +41,7 @@
             background: url(../img/hero-reg.svg) no-repeat left 8px center;
             border: 1px solid $color-primary;
 
-            span{
+            span {
                 color: $color-secondary;
                 font-weight: 500;
             }
@@ -52,4 +49,16 @@
         }
     }
 
+    &-text {
+        color: $color-gray;
+        margin: 32px 0;
+    }
+
+    &-btn {
+        width: 157px;
+    }
+
+    &-subtitle{
+        margin-bottom: 8px;
+    }
 }

@@ -1,145 +1,45 @@
 .header {
-    height: 66px;
+    height: 103px;
 
-    &-fixed{
+    &-fixed {
         position: fixed;
         z-index: 2;
+        background: $bg-dark;
         top: 0;
         left: 0;
         right: 0;
-        padding: 32px 0 8px;
-        background: $bg-dark;
+        padding: 32px 0;
     }
 
     &-wrapper {
         display: flex;
-        align-items: flex-end;
-        justify-content: space-between;
-        
-
-        @media (max-width:1150px) {
-            align-items: center;
-        }
-
-        @media (max-width:450px) {
-            padding: 15px 0 8px;
-        }
-
-    }
-
-    &-logo {
-        display: block;
-        width: 72px;
-        color: $color-secondary;
-        background: url(../img/logo.svg) no-repeat left center;
-        padding-left: 24px;
-        background-size: 16px;
-        text-transform: capitalize;
-        font-weight: 700;
-        line-height: 21px;
-    }
-
-    .nav {
-        flex: 1;
-        display: flex;
-        justify-content: flex-end;
-        gap: 32px;
         align-items: center;
-
-        @media(max-width:1150px) {
-            position: absolute;
-            z-index: 2;
-            background: $bg-dark;
-            top: -100%;
-            right: 0;
-            bottom: 100%;
-            left: 0;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            overflow-x: hidden;
-            transition: .5s linear;
-
-            &.active {
-                bottom: 0;
-                height: 110vh;
-                top: 0;
-            }
-        }
+        justify-content: space-between;
     }
 
     .menu {
         display: flex;
+        justify-content: center;
         gap: 32px;
 
-        @media (max-width:1150px) {
-            flex-direction: column;
-            align-items: center;
+        li {
+            color: $color-white;
+            @include open-sans(16px, 1.7, 400);
+            letter-spacing: 0.64px;
         }
     }
 
-    .link {
-        line-height: 21px;
+    .links {
         display: flex;
-        transition: .3s linear;
-
-        &::before {
-            content: "#";
-            color: $color-violete;
-        }
-
-        &.active,
-        &:hover {
-            color: $color-secondary;
-        }
-        &.active{
-            pointer-events: none;
-        }
+        gap: 105px;
+        color: $color-white;
     }
 
-    .drop-lang {
-        display: none;
-    }
-
-    .switch-lang {
-        width: 37px;
-        position: relative;
-        background: url(../img/lang-switch.svg) no-repeat right center;
+    .button-register{
+        background: transparent;
+        border: none;
         cursor: pointer;
-        padding: 5px;
-
-        &:hover {
-            .drop-lang {
-                display: block;
-                position: absolute;
-                top: 22px;
-
-            }
-        }
-    }
-
-    .burger {
-        display: none;
-
-        @media (max-width:1150px) {
-            display: block;
-            position: relative;
-            z-index: 5;
-            width: 60px;
-            height: 60px;
-            background: url(../img/burger.svg) no-repeat center;
-            transition: .3s ease;
-
-            &.active {
-                background: url(../img/close.svg) no-repeat center;
-
-            }
-        }
-
-        @media (max-width:450px) {
-            width: 40px;
-            height: 40px;
-        }
-
+        font: inherit;
+        color: inherit;
     }
 }

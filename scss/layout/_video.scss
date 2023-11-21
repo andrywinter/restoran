@@ -1,0 +1,52 @@
+.video {
+
+    position: relative;
+
+    &::after{
+        content: "";
+        max-width: 1930px;
+        width: 100%;
+        position: absolute;
+        top:0;
+        left:0;
+        bottom:0;
+        right:0;
+        background: url(../image/video-bg.jpeg);
+        z-index: 2;
+        opacity: 1;
+    }
+
+    &.hide{
+        &::after{
+            opacity: 0;
+            z-index: -1;
+            
+        }
+    }
+
+    &-block {
+        display: flex;
+        justify-content: center;
+    }
+
+    &-btn {
+        position: absolute;
+        z-index: 3;
+        opacity: 1;
+        width: 120px;
+        height: 120px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background: url(../image/Play-video.svg) no-repeat center;
+        cursor: pointer;
+        
+        &.active{
+            opacity: 0;
+            z-index: -1;
+        }
+    }
+
+
+
+}

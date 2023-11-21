@@ -1,0 +1,40 @@
+.about-us {
+    background: url(../image/knife.png) center no-repeat, url(../image/about-bg.jpeg) no-repeat center;
+    background-size: auto, cover;
+    padding: 334px 0;
+    background-attachment: local, fixed;
+
+    &-wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &-content {
+        max-width: 523px;
+        width: 100%;
+
+        &:nth-child(odd){
+            text-align: right;
+
+            .about-us-subtitle {
+                flex-direction: row;
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    &-btn {
+        width: 141px;
+    }
+
+    &-text {
+        color: $color-gray;
+        margin: 32px 0;
+        
+    }
+
+    &-img {
+        max-width: 703px;
+        width: 100%;
+    }
+}

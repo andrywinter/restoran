@@ -1,0 +1,62 @@
+.chef {
+    padding: 128px 0;
+
+    &-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 95px;
+        flex-wrap: wrap;
+    }
+
+    &-figure {
+        max-width: 635px;
+        width: 100%;
+    }
+
+    &-content {
+        max-width: 570px;
+        width: 100%;
+    }
+
+    &-text {
+        margin: 64px 0;
+        position: relative;
+        font-style: italic;
+        color: $color-gray;
+
+
+        &::first-letter {
+            padding-left: 57px;
+        }
+
+        &::before {
+            content: "";
+            display: block;
+            width: 47px;
+            height: 41px;
+            background: url(../image/qute.svg) no-repeat;
+            position: absolute;
+            left: 0;
+            top: -10px
+        }
+    }
+
+    &-name {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    &-job {
+        display: block;
+        margin-bottom: 64px;
+    }
+
+    &-signature {
+        width: 235px;
+    }
+
+    &-name {
+        font-size: 32px;
+    }
+}
