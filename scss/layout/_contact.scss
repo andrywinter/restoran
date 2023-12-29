@@ -1,4 +1,5 @@
-.contact{
+.contact {
+
     padding: 137px 0 170px;
 
     &-wrapper {
@@ -6,5 +7,43 @@
         align-items: center;
         gap: 20px;
         justify-content: space-between;
+
+        
+    }
+
+    &-content {
+        max-width: 513px;
+        width: 100%;
+    }
+
+    &-figure {
+        max-width: 667px;
+        width: 100%;
+    }
+
+    &-text{
+        color: $color-gray;
+
+    }
+
+    &-btn {
+        display: block;
+        width: 113px;
+        margin: 64px 0 auto;
+    }
+
+    &-text {
+        display: block;
+        margin: 64px 0 32px;
+    }
+
+     ul.open-time {
+        display: flex;
+        margin: 16px 0 auto;
+        flex-direction: column;
+        gap: 16px;
+        color: $color-white;
     }
 }
+
+
